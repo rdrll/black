@@ -1,5 +1,5 @@
 """
-Generating lines of code.-
+Generating lines of code.
 """
 import sys
 from dataclasses import replace
@@ -169,6 +169,7 @@ class LineGenerator(Visitor[Line]):
                 rpar = Leaf(token.RPAR, "")
                 node.insert_child(0, lpar)
                 node.append_child(rpar)
+                pass
 
         yield from self.visit_default(node)
 
